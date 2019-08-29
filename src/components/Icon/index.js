@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import withTheme from '../../utils/withTheme';
 import { StyledIcon } from './style';
 
 function Icon({ name, ...props }) {
@@ -26,4 +27,4 @@ Icon.propTypes = {
   onClick: PropTypes.func
 };
 
-export default Icon;
+export default withTheme(Icon);

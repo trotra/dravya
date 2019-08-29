@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import useEffectAfterMount from '../../utils/useEffectAfterMount';
+import withTheme from '../../utils/withTheme';
 import Icon from '../Icon';
 import { StyledAlert, Title, Message, Description } from './style';
 
@@ -40,4 +41,4 @@ Alert.propTypes = {
   onClose: PropTypes.func
 };
 
-export default Alert;
+export default withTheme(Alert);

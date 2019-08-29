@@ -1,18 +1,15 @@
 import React from 'react';
-import { render, fireEvent } from '@testing-library/react';
-import { withTheme } from 'test-utils';
+import { render } from '@testing-library/react';
 import { Icon } from '../src';
 
-const IconWithTheme = withTheme(Icon);
-
 test('Should render icon', () => {
-  const { queryByTestId } = render(<IconWithTheme name="leaf" />);
+  const { queryByTestId } = render(<Icon name="leaf" />);
 
   expect(queryByTestId('icon')).toBeInTheDocument();
 });
 
 test('Should render with disabled', () => {
-  const { getByTestId } = render(<IconWithTheme name="leaf" disabled={true} />);
+  const { getByTestId } = render(<Icon name="leaf" disabled={true} />);
 
-  expect(getByTestId('icon').getAttribute('disabled')).toBe('');
+  expect(getByTestId('icon')).toHaveAttribute('disabled');
 });
