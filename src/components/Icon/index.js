@@ -1,16 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import withTheme from '../../utils/withTheme';
+import Themed from '../Themed';
 import { StyledIcon } from './style';
 
 function Icon({ name, ...props }) {
   return (
-    <StyledIcon
-      className={`glyphicons glyphicons-${name}`}
-      onClick={props.disabled ? null : props.onClick}
-      data-testid="icon"
-      {...props}
-    />
+    <Themed>
+      <StyledIcon
+        className={`glyphicons glyphicons-${name}`}
+        onClick={props.disabled ? null : props.onClick}
+        data-testid="icon"
+        {...props}
+      />
+    </Themed>
   );
 }
 
@@ -27,4 +29,4 @@ Icon.propTypes = {
   onClick: PropTypes.func
 };
 
-export default withTheme(Icon);
+export default Icon;
