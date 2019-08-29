@@ -5,6 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "storybook": "start-storybook -p 9001 -c .storybook",
+    "prebuild": "rm -rf lib",
     "build": "NODE_ENV=production babel src -d lib --copy-files",
     "test": "jest --watchAll",
     "prepare": "npm run build"
