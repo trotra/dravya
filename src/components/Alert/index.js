@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import useEffectAfterMount from '../../utils/useEffectAfterMount';
+import Themed from '../Themed';
 import Icon from '../Icon';
 import { StyledAlert, Title, Message, Description } from './style';
 
@@ -14,15 +15,17 @@ function Alert({ message, description, type, closable, onClose }) {
   }
 
   return (
-    <StyledAlert type={type} data-testid="alert">
-      <Title>
-        <Message withDescription={!!description} data-testid="message">
-          {message}
-        </Message>
-        {closable && <Icon name="remove" onClick={() => setHide(true)} data-testid="close" />}
-      </Title>
-      {description && <Description data-testid="description">{description}</Description>}
-    </StyledAlert>
+    <Themed>
+      <StyledAlert type={type} data-testid="alert">
+        <Title>
+          <Message withDescription={!!description} data-testid="message">
+            {message}
+          </Message>
+          {closable && <Icon name="remove" onClick={() => setHide(true)} data-testid="close" />}
+        </Title>
+        {description && <Description data-testid="description">{description}</Description>}
+      </StyledAlert>
+    </Themed>
   );
 }
 
