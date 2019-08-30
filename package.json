@@ -45,6 +45,7 @@
     "@emotion/core": "^10.0.16",
     "@emotion/styled": "^10.0.15",
     "emotion-theming": "^10.0.14",
+    "hoist-non-react-statics": "^3.3.0",
     "prop-types": "^15.7.2"
   }
 }
