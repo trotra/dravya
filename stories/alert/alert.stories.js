@@ -1,10 +1,14 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Alert } from '../src';
+import { Alert } from '../../src';
+import info from './info.md';
 
 storiesOf('Alert', module)
   .addParameters({
-    component: Alert
+    component: Alert,
+    notes: {
+      markdown: info
+    }
   })
   .add('types', () => (
     <>

@@ -12,7 +12,7 @@ addParameters({
 });
 
 function loadStories() {
-  const req = require.context('../stories', true, /(\.story\.js$)/);
+  const req = require.context('../stories', true, /(\.stories\.js$)/);
   req.keys().forEach(filename => req(filename));
 }
 
