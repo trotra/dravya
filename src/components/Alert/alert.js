@@ -1,15 +1,13 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import useEffectAfterMount from '../../hooks/useEffectAfterMount';
 import Icon from '../Icon';
 import { StyledAlert, Title, Message, Description } from './style';
 
 function Alert({ message, description, type, closable, onClose }) {
   const [hide, setHide] = useState(false);
 
-  useEffectAfterMount(onClose, [hide]);
-
   if (hide) {
+    onClose();
     return null;
   }
 
