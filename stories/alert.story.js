@@ -15,6 +15,4 @@ storiesOf('Alert', module)
     </>
   ))
   .add('description', () => <Alert message="Success Text" description="Success description text" type="success" />)
-  .add('closable', () => (
-    <Alert message="Success Text" closable={true} onClose={() => console.log('closed')} type="success" />
-  ));
+  .add('closable', () => <Alert message="Success Text" closable={true} onClose={() => {}} type="success" />);

@@ -5,7 +5,7 @@ export default function(hex, opacity = 1) {
 
   hex = hex.replace('#', '');
 
-  if (hex && hex.length == 3) {
+  if (hex && hex.length === 3) {
     hex += hex;
   }
 
