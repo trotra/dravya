@@ -1,14 +1,14 @@
 import styled from '@emotion/styled';
+import { disabledCss } from '../../utils/commonStyles';
 
 export const StyledIcon = styled.i(props => ({
   color: props.color,
   fontSize: props.size ? `${props.size}px` : props.theme.fontSize.default,
-  cursor: props.onClick && !props.disabled ? 'pointer' : 'default',
-  opacity: props.disabled ? 0.5 : 1,
-  ...(props.onClick &&
-    !props.disabled && {
-      '&:hover': {
-        opacity: 0.7
-      }
-    })
+  ...(props.disabled && disabledCss),
+  ...(props.onClick && {
+    cursor: 'pointer',
+    '&:hover': {
+      opacity: 0.7
+    }
+  })
 }));
