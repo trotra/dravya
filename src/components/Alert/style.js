@@ -25,13 +25,17 @@ export const Title = styled.div`
   justify-content: space-between;
 `;
 
-export const Message = styled.div`
-  color: #000;
-  font-size: ${({ theme, withDescription }) => theme.fontSize[withDescription ? 'large' : 'default']};
-`;
+export const Message = styled.div(({ theme, withDescription }) => ({
+  color: theme.colors.font,
+  fontSize: theme.fontSize[withDescription ? 'large' : 'default']
+}));
 
-export const Description = styled.div`
-  margin-top: 10px;
-  color: rgba(0, 0, 0, 0.8);
-  font-size: ${({ theme }) => theme.fontSize.default};
-`;
+export const Description = styled.div(
+  {
+    marginTop: 10
+  },
+  ({ theme }) => ({
+    color: theme.colors.font,
+    fontSize: theme.fontSize.default
+  })
+);

@@ -4,7 +4,9 @@ export const theme = {
     success: '#b7eb8f',
     warning: '#ffe58f',
     error: '#ffa39e',
-    info: '#91d5ff'
+    info: '#91d5ff',
+    font: '#303030',
+    border: '#cfc4c4'
   },
   fontSize: {
     default: '14px',

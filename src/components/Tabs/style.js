@@ -15,7 +15,7 @@ export const TabList = styled(List)(props => {
   const borderPosition = BORDER_POSITION[props.orientation](props.invertBorder);
 
   return {
-    [`${borderPosition}`]: '1px solid rgba(0, 0, 0, 0.2)'
+    [`${borderPosition}`]: `1px solid ${props.theme.colors.border}`
   };
 });
 
