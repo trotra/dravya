@@ -16,12 +16,11 @@ export const List = styled.ul(
 
 export const Item = styled.li(
   {
-    cursor: 'pointer',
-    color: 'rgba(0, 0, 0, 0.65)'
+    cursor: 'pointer'
   },
   ({ theme, isActive, disabled, size }) => ({
     padding: getPx(theme.scale, theme.sizes[size]),
-    color: isActive && theme.colors.primary,
+    color: theme.colors[isActive ? 'primary' : 'font'],
     fontSize: theme.fontSize[size],
     ...(disabled && disabledCss),
     '&:hover': {
