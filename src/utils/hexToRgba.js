@@ -1,4 +1,4 @@
-export default function(hex, opacity = 1) {
+export function hexToRgba(hex, opacity = 1) {
   if (!/^#(?:[0-9a-f]{3}){1,2}$/i.test(hex)) {
     throw new Error('Invalid color');
   }
