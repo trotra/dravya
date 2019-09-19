@@ -14,6 +14,6 @@ export const Mask = styled(Animation)(
   },
   props => ({
     backgroundColor: hexToRgba(props.theme.colors.mask, 0.45),
-    animation: `${props.show ? fadeIn : fadeOut} 0.2s ease-out`
+    animation: `${props.show ? fadeIn : fadeOut} 0.1s ease-out`
   })
 );

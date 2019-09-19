@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Mask as StyledMask } from './style';
 
-function Mask({ show, onClick }) {
-  return <StyledMask onClick={onClick} show={show} data-testid="mask" />;
+function Mask(props) {
+  return <StyledMask onClick={props.onClick} show={props.show} data-testid="mask" />;
 }
 
 Mask.defaultProps = {

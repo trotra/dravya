@@ -22,7 +22,6 @@ export const Wrapper = styled(Animation)(
 export const Modal = styled.div(
   {
     position: 'relative',
-    width: '520px',
     maxWidth: '100%',
     background: '#fff',
     margin: '0 16px',
@@ -30,8 +29,9 @@ export const Modal = styled.div(
   },
   props => ({
     top: !props.centered && '100px',
+    width: `${props.width}px`,
     boxShadow: `0 4px 12px ${hexToRgba(props.theme.colors.mask, 0.15)}`,
-    animation: `${props.show ? moveDown : moveUp} 0.2s ease-out`
+    animation: `${props.show ? moveDown : moveUp} 0.1s ease-out`
   })
 );
 
@@ -58,7 +58,9 @@ export const Title = styled.h3(
 );
 
 export const Body = styled.div({
-  padding: 24
+  padding: 24,
+  maxHeight: 'calc(100vh - 300px)',
+  overflow: 'scroll'
 });
 
 export const Footer = styled.div(
