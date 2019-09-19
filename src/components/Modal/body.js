@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Body as StyledBody } from './style';
 
 function Body({ children }) {
-  return <StyledBody>{children}</StyledBody>;
+  return <StyledBody tabIndex={0}>{children}</StyledBody>;
 }
 
 Body.propTypes = {

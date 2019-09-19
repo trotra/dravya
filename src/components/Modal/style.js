@@ -60,7 +60,10 @@ export const Title = styled.h3(
 export const Body = styled.div({
   padding: 24,
   maxHeight: 'calc(100vh - 300px)',
-  overflow: 'scroll'
+  overflow: 'auto',
+  '&:focus': {
+    outline: 'none'
+  }
 });
 
 export const Footer = styled.div(
