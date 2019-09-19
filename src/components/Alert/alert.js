@@ -8,11 +8,10 @@ function Alert({ message, description, type, closable, onClose }) {
 
   if (hide) {
     onClose();
-    return null;
   }
 
   return (
-    <StyledAlert type={type} data-testid="alert">
+    <StyledAlert show={!hide} type={type} data-testid="alert">
       <Title>
         <Message withDescription={!!description} data-testid="message">
           {message}

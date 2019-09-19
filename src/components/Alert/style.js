@@ -1,7 +1,9 @@
 import styled from '@emotion/styled';
 import { hexToRgba } from '../../utils/hexToRgba';
+import { fadeIn, fadeOut } from '../../utils/animation';
+import Animation from '../Animation';
 
-export const StyledAlert = styled.div(
+export const StyledAlert = styled(Animation)(
   {
     padding: 10,
     borderRadius: 4,
@@ -10,12 +12,13 @@ export const StyledAlert = styled.div(
       marginBottom: 0
     }
   },
-  ({ theme, type }) => {
+  ({ theme, type, show }) => {
     const color = theme.colors[type];
 
     return {
       border: `1px solid ${color}`,
-      backgroundColor: `${hexToRgba(color, 0.45)}`
+      backgroundColor: `${hexToRgba(color, 0.45)}`,
+      animation: `${show ? fadeIn : fadeOut} 0.2s ease-out`
     };
   }
 );

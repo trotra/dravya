@@ -27,6 +27,8 @@ test('Should render close Icon', () => {
 
   expect(icon).toBeInTheDocument();
 
+  expect(queryByTestId('alert')).toBeInTheDocument();
+
   fireEvent.click(icon);
 
   expect(queryByTestId('alert')).not.toBeInTheDocument();
