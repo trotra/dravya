@@ -5,5 +5,6 @@ import Icon from './components/Icon';
 import List from './components/List';
 import Modal from './components/Modal';
 import Tabs from './components/Tabs';
+import Table from './components/Table';
 
-export { ThemeProvider, Alert, Button, Icon, List, Modal, Tabs };
+export { ThemeProvider, Alert, Button, Icon, List, Modal, Tabs, Table };

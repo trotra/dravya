@@ -31,7 +31,7 @@ export const Modal = styled.div(
     top: !props.centered && '100px',
     width: `${props.width}px`,
     boxShadow: `0 4px 12px ${hexToRgba(props.theme.colors.mask, 0.15)}`,
-    animation: `${props.show ? moveDown : moveUp} 0.1s ease-out`
+    animation: `${props.show ? moveDown : moveUp} 0.25s ease-out`
   })
 );
 
